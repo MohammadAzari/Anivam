@@ -66,7 +66,7 @@ table {
 /* --- Common Styles ---*/
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat';
+	font-family: 'IranSans';
   font-size: 16px;
 }
 
@@ -94,6 +94,28 @@ body {
   box-sizing: border-box;
 }
 
+@font-face {
+font-family: "IranSans";
+src: url("../fonts/IRANSans.woff") format("woff");
+font-weight: normal;
+}
+
+@font-face {
+font-family: "IranSans";
+src: url("../fonts/IRANSans-Bold.woff") format("woff");
+font-weight: bold;
+}
+
+@font-face {
+font-family: "IranSans";
+src: url("../fonts/IRANSans-Light.woff") format("woff");
+font-weight: lighter;
+}
+
+@font-face {
+font-family: "Yekan";
+src: url("../fonts/Yekan.woff") format("woff");
+}
 
 #loading {
    width: 100%;
@@ -134,7 +156,7 @@ body {
 /*------ Navbar Styling ------*/
 
 .navbar {
-  font-family: "Montserrat";
+  font-family: "IranSans";
 	padding-top: 25px;
 	padding-bottom: 25px;
 	background-color: transparent !important;
@@ -143,7 +165,7 @@ body {
 }
 
 .navbar .navbar-brand {
-	font-family: 'Montserrat';
+	font-family: 'IranSans';
 	font-size: 36px;
 	font-weight: 600;
 	letter-spacing: 0;
@@ -193,7 +215,7 @@ body {
 .navbar-nav .nav-item .nav-link {
   color: #364655;
 	font-weight: 500;
-	font-size: 1.5rem;
+	font-size: 1rem;
 
 }
 
@@ -202,7 +224,7 @@ body {
 }
 
 .nav-white .nav-item .nav-link {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	text-transform: capitalize;
   color: #FFFFFF;
 }
@@ -369,6 +391,7 @@ body {
 }
 
 .chimp-form .mail {
+	font-family: "Yekan";
 	position: center;
 	background-color: #F9F9F9;
   box-shadow: none;
@@ -385,7 +408,7 @@ body {
 
 .form input {
   color: #222222;
-  font-family: 'Montserrat';
+  font-family: 'Yekan';
   padding: 0;
   font-size: 15px;
 	font-weight: 500;
@@ -410,7 +433,7 @@ body {
   margin-left: -50px;
   padding: 0 25px 0 25px;
 	background: #4285f4;
-	font-family: 'Montserrat';
+	font-family: 'IranSans';
 	font-size: 14px;
 	font-weight: 500;
 	text-transform: capitalize;
@@ -430,7 +453,7 @@ body {
 	left: 20%;
 	right: 0;
 	bottom: 0%;
-	font-family: 'Montserrat';
+	font-family: 'Yekan';
 	font-size: 13px;
 	font-weight: 500;
 	color: #FF3333;
@@ -441,7 +464,7 @@ body {
 	left: 20%;
 	bottom: -90%;
 	vertical-align: middle;
-	font-family: 'Montserrat';
+	font-family: 'IranSans';
 	font-size: 13px !important;
 	font-weight: 500 !important;
 	margin: 0 !important;
@@ -460,7 +483,7 @@ body {
 	bottom: -90%;
 	vertical-align: middle;
 	text-align: center;
-	font-family: 'Montserrat';
+	font-family: 'Yekan';
 	font-size: 13px;
 	font-weight: 500;
 	color: red;
@@ -562,7 +585,7 @@ body {
   line-height: 1.6;
 	letter-spacing: 0.01em;
   color: #5f6368;
-	max-width: 540px;
+	max-width: 600px;
 	margin: 0 auto;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -574,6 +597,7 @@ body {
 	padding: 50px 30px;
 	border-radius: 10px;
 	background: #FFFFFF;
+	max-width: 600px;
 }
 /*
 .card-icon {
@@ -604,18 +628,20 @@ body {
 }
 
 .card-text h3 {
-	font-size: 21px;
+	font-size: 18px;
 	font-weight: 600;
 	color: #3a3a47;
 	margin-bottom: 15px;
 }
 
 .card-text p {
-	font-size: 15px;
+	font-family: 'IranSans';
+	font-weight: lighter;
+	font-size: 12px;
 	font-weight: 500;
 	color: rgb(129, 129, 152);
 	line-height: 1.6;
-	max-width: 320px;
+	max-width: 250px;
 	margin: 0 auto;
 }
 
@@ -658,7 +684,7 @@ body {
 }
 
 .flex-inner .f-text .left-content a {
-	font-family: "Montserrat";
+	font-family: "IranSans";
 	font-size: 14px;
 	font-weight: bold;
 	position: relative;
@@ -728,7 +754,7 @@ body {
 
 
 .table-left h3, .table-right h3 {
-	font-size: 21px;
+	font-size: 18px;
 	font-weight: 600;
 	color: #505050;
 	margin-bottom: 15px;
@@ -991,7 +1017,7 @@ body {
 
 
 .flex-inner .f-text .left-content a {
-	font-family: "Montserrat";
+	font-family: "IranSans";
 	font-size: 14px;
 	font-weight: bold;
 	color: #8798ab;
@@ -1087,10 +1113,10 @@ body {
 	}
 
 	.ar-feature .ar-text h3 {
-		font-size: 21px;
+		font-size: 18px;
 		color: #364655;
 	  font-weight: 600;
-	  line-height: 1.2;
+	  line-height: 1.5;
 	  margin-bottom: 10px;
 	}
 
@@ -1233,7 +1259,7 @@ body {
 		}
 
 		.counter-up h3 {
-			font-size: 24px;
+			font-size: 18px;
 			font-weight: 700;
 			color: #364655;
 		}
@@ -1341,7 +1367,7 @@ body {
 	}
 
 	.yd-reviews .card-single .review-attribution a {
-		font-family: 'Montserrat';
+		font-family: 'IranSans';
 		font-size: 12px;
 		font-weight: 500;
 		color: #4285f4;
@@ -1437,7 +1463,7 @@ body {
 	}
 
 	.footer-sm .footer-logo {
-		font-family: 'Montserrat';
+		font-family: 'IranSans';
 		font-size: 24px;
 		font-weight: 600;
 		color: #FFFFFF;
@@ -1462,7 +1488,7 @@ body {
 	}
 
 	.footer-sm ul li {
-		font-family: "Montserrat";
+		font-family: "IranSans";
 	  font-size: 13px;
 	  font-weight: 400;
 		letter-spacing: 0;
@@ -1536,7 +1562,7 @@ body {
 	}
 
 	.back-to-top {
-		font-family: 'Montserrat';
+		font-family: 'IranSans';
 		font-size: 12px;
 		font-weight: 700;
 		color: #FFFFFF;
