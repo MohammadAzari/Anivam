@@ -18,31 +18,28 @@
   <link href="../css/style-login.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-  <div class="wrapper">
-    <img src="./../Logo.png">
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
 
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="../images/uses.png" id="icon" alt="User Icon" />
-    </div>
+      <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="../images/user.png" id="icon" alt="User Icon" style="width: 50%; height: 50%"/>
+        </div>
 
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
+        <!-- Login Form -->
+        <form action="./create.php" method="get" accept-charset="UTF-8">
+          <input type="text" id="login" class="fadeIn second" name="login" placeholder="نام کاربری">
+          <input type="password" id="password" class="fadeIn third" name="login" placeholder="رمز عبور">
+          <input type="submit" class="btn btn-primary btn-action" value="ورود" style="font-family: IranSans">
+        </form>
 
     <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
-    </div>
+      <div id="formFooter" style="text-align: left">
+        <a class="underlineHover" href="#" style="text-decoration: none">فراموشی رمز؟</a>
+      </div>
 
+    </div>
   </div>
-</div>
-</div>
 </body>
 </html>
