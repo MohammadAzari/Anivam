@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from datetime import date
 
 
-class Person(Models.Model):
+class Person(models.Model):
     """model representing a person."""
     int_code = models.PositiveIntegerField(primary_key=True, max_length=10, blank=False, null=False)
     first_name = models.CharField(max_length=100, null=False, blank=False)
@@ -13,11 +13,11 @@ class Person(Models.Model):
     date_of_birth = models.DateField(null=False, blank=False)
     credit = models.PositiveIntegerField(default=0)
 
-    def get_absolute_url(self):
-        """
-        Returns the url to access a particular person instance.
-        """
-        return reverse('catalog:person-detail', args=[str(self.id)])
+    # def get_absolute_url(self):
+    #     """
+    #     Returns the url to access a particular person instance.
+    #     """
+    #     return reverse('catalog:person-detail', args=[str(self.id)])
 
 
     def __str__(self):
@@ -27,7 +27,7 @@ class Person(Models.Model):
         return '%s, %s' % (self.last_name, self.first_name)
 
 
-class Transaction(Models.model):
+class Transaction(models.Model):
     """model representing a Transaction."""
 
-    persons = models..ManyToManyField(Person, help_text='please Select two persons for this Transaction')
+    persons = models.ManyToManyField(Person, help_text='please Select two persons for this Transaction')
