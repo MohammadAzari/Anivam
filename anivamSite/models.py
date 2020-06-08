@@ -12,6 +12,7 @@ class Person(models.Model):
     last_name = models.CharField(max_length=100, null=False, blank=False)
     date_of_birth = models.DateField(null=False, blank=False)
     credit = models.PositiveIntegerField(default=0)
+    transactions = models.ManyToManyField(Transaction)
 
     # def get_absolute_url(self):
     #     """
@@ -19,6 +20,8 @@ class Person(models.Model):
     #     """
     #     return reverse('catalog:person-detail', args=[str(self.id)])
 
+    class Meta:
+        ordering = ["due_back"]
 
     def __str__(self):
         """
