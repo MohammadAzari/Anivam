@@ -12,7 +12,8 @@ class Person(models.Model):
     last_name = models.CharField(max_length=100, null=False, blank=False)
     date_of_birth = models.DateField(null=False, blank=False)
     credit = models.PositiveIntegerField(default=0)
-    follows = models.ManyToManyField('self', related_name = 'followers', symmetrical=False)
+    followers = models.ManyToManyField('self', related_name = 'follows', symmetrical=False)
+    followings = models.ManyToManyField('self', related_name = 'followis', symmetrical=False)
     # def get_absolute_url(self):
     #     """
     #     Returns the url to access a particular person instance.
