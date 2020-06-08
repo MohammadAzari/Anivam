@@ -6,7 +6,7 @@ from . import views
 app_name='anivamSite'
 
 urlpatterns = [
-    url(r'^$', views.Index.as_view(), name='index'),
+    url(r'^$', views.IndexView, name='index'),
 ]
 
 
