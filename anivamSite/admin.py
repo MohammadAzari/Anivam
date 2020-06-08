@@ -9,4 +9,4 @@ class PersonAdmin(admin.ModelAdmin):
 
 @admin.register(models.Transaction)
 class TransactionAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('lender', 'borrower')

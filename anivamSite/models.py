@@ -15,7 +15,6 @@ class Person(models.Model):
     followers = models.ManyToManyField('self', related_name = 'follows', symmetrical=False)
     followings = models.ManyToManyField('self', related_name = 'followis', symmetrical=False)
 
-
     def __unicode__(self):
         return u'%s follows %s' % (self.followers, self.followings)
 
@@ -35,5 +34,7 @@ class Person(models.Model):
 
 class Transaction(models.Model):
     """model representing a Transaction."""
-
-    persons = models.ManyToManyField(Person, help_text='please Select two persons for this Transaction')
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    borrower = models.ForeignKey('Person', related_name = 'borrower', on_delete=models.CASCADE)
+    lender = models.ForeignKey('Person', related_name = 'lender', on_delete=models.CASCADE)
+    credit = models.PositiveIntegerField(blank=False, null=False)
