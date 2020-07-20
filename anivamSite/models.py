@@ -18,12 +18,6 @@ class Person(models.Model):
     def __unicode__(self):
         return u'%s follows %s' % (self.followers, self.followings)
 
-    # def get_absolute_url(self):
-    #     """
-    #     Returns the url to access a particular person instance.
-    #     """
-    #     return reverse('catalog:person-detail', args=[str(self.id)])
-
 
     def __str__(self):
         """

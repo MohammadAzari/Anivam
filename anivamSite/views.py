@@ -1,3 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
+def home(request):
+    return render(request, 'anivamSite/index.html')
+
+def profile(request):
+    # following = None
+    # followers = None
+    # credit = None
+    # # if request.user.is_authenticated:
+    #     followers_numb = len(request.user.followers.all())
+    #     followings_numb = len(request.user.followings.all())
+    #     credit = request.user.credit
+    # {'following':followers_numb, 'followings':followings_numb, 'credit':credit}
+    return render(request, 'anivamSite/profile.html')

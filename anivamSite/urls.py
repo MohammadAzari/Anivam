@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
@@ -6,7 +6,8 @@ from . import views
 app_name='anivamSite'
 
 urlpatterns = [
-    # url(r'^$', views.IndexView, name='index'),
+    path('', views.home, name='index'),
+    path('profile/', views.profile, name='profile'),
 ]
 
 

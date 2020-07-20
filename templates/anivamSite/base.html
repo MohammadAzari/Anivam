@@ -1,0 +1,73 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>پلتفرم مالی آنیوام</title>
+    <link rel="icon" href="{% static 'assets/icons/favicon.png' %}" type="image/png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="description" content="Pelican Multipurpose Startup Business Template">
+    <meta name="keywords" content="Pelican HTML Template, Pelican Startup Business Template, Startup Template"> -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <!--<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}"> <!-- Resource style -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}"> <!-- Resource style -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+    {% block header %}
+    {% endblock %}
+</head>
+  <body>
+    <div class="wrapper">
+      <!-- Navbar Section -->
+      <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div class="container container">
+          <img src="{% static 'assets/images/Logo.png' %}" width="50" height="50">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navbar-right">
+              {% if user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/logout">خروج</a></li>
+              {% else %}
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/login">ورود</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/profile">پروفایل</a></li>
+              {% endif %}
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% static 'assets/pages/services.html' %}">خدمات</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% static 'assets/pages/rules.html' %}">قوانین</a></li> -->
+              
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">خانه</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      {% block content %}
+      {% endblock %}
+
+       <!-- Scroll To Top -->
+        <div id="back-top" class="bk-top">
+          <div class="bk-top-txt">
+             <a class="back-to-top js-scroll-trigger" href="#main">بالا</a>
+          </div>
+        </div>
+       <!-- Scroll To Top Ends-->
+
+    </div><!-- Wrapper -->
+
+
+    <!-- Jquery and Js Plugins -->
+    <script type="text/javascript" src="{% static 'assets/js/jquery-2.1.1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/plugins.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/custom.js' %}"></script>
+    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+  </body>
+</html>

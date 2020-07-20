@@ -1,0 +1,414 @@
+﻿{% extends 'anivamSite/base.html' %}
+{% load static %}
+
+{% block content %}
+      <div id="main" class="main">
+        <div class="hero">
+          <div class="container">
+            <div class="row align-center">
+              <div class="col-md-12 col-lg-5">
+                <img class="img-fluid" src="{% static 'assets/images/instant-loans.jpg' %}" alt="Hero">
+              </div>
+              <div class="col-md-12 col-lg-6 offset-lg-1">
+                <div class="hero-content">
+                  <h5 style="text-align: right">آنیوام</h5>
+                  <h2 style="text-align: right">سریع و راحت اعتبار مالی دریافت کنید</h2>
+                  <p dir="rtl" style="text-align: right; font-family: 'IranSans'">با استفاده از خدمات ما می‌توانید تقاضای وام بدهید یا متقاضیان را تأمین کنید و سود دریافت کنید.</p>
+                  <div class="form">
+                  <a href="https://google.com" class="btn btn-primary btn-action" style="display:block">شروع کنید</a>
+
+                  <div id="response"></div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="features" class="features">
+          <div class="container-m">
+            <div class="row text-center">
+              <div class="col-md-12">
+                <div class="form" style="align:center">
+                  <form id="chimp-form" class="search-form" action="/search" method="get" accept-charset="UTF-8" autocomplete="off" novalidate>
+                    <input class="submit-button" type="submit" value="جست‌وجو" align="center"><input class="mail" id="chimp-email" type="email" name="email" placeholder="جست‌وجو میان پیشنهادات و پروژه‌ها" autocomplete="off" style="text-align:right; width:500px">
+                  </form>
+                </div>
+                <div class="features-intro">
+                  <h2 style="margin-top: 30px">با جست‌وجو میان پروژه‌های موجود، موردی که متناسب شماست را پیدا کنید</h2>
+                  <p dir="rtl" style="font-family: 'IranSans'; font-size: 15px; font-weight: lighter">ما از میان تمامی پروژه‌ها، آن‌هایی را که مطابق شرایط شماست فیلتر کرده و به نمایش می‌گذاریم. </p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-list">
+                  <div class="card-icon">
+                    <div class="card-img">
+                      <img src="{% static 'assets/icons/p1.png' %}" width="60" alt="Feature">
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <h3>پروژه نمونه ۱</h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-list">
+                  <div class="card-icon">
+                    <div class="card-img">
+                      <img src="{% static 'assets/icons/p2.png' %}" width="60" alt="Feature">
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <h3>پروژه نمونه ۲</h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-list">
+                  <div class="card-icon">
+                    <div class="card-img">
+                      <img src="{% static 'assets/icons/p3.png' %}" width="60" alt="Feature">
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <h3>پروژه نمونه ۳</h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-list">
+                  <div class="card-icon">
+                    <div class="card-img">
+                      <img src="{% static 'assets/icons/p4.png' %}" width="60" alt="Feature">
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <h3>پروژه نمونه ۴</h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-list">
+                  <div class="card-icon">
+                    <div class="card-img">
+                      <img src="{% static 'assets/icons/p5.png' %}" width="60" alt="Feature">
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <h3> پروژه نمونه ۵</h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-list">
+                  <div class="card-icon">
+                    <div class="card-img">
+                      <img src="{% static 'assets/icons/p6.png' %}" width="60" alt="Feature">
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <h3>پروژه نمونه ۶</h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="services" class="ar-ft-single">
+          <div class="container-m">
+            <div class="ar-feature">
+              <div class="ar-image">
+                <img class="ar-img img-fluid" src="{% static 'assets/images/uses.png' %}" width="420" alt="Hero Image">
+             </div>
+              <div class="ar-list">
+                <ul>
+                  <li>
+                    <div class="ar-icon">
+                      <img src="{% static 'assets/icons/p1.png' %}" width="40" alt="Icon">
+                    </div>
+                   <div class="ar-text" style="text-align:right" dir="rtl">
+                     <h3>برای سفر یا خرید خودرو کمک‌هزینه بگیرید</h3>
+                     <p style="font-family: 'IranSans'; font-size: 0.8rem">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                   </div>
+                 </li>
+                 <li>
+                   <div class="ar-icon">
+                     <img src="{% static 'assets/icons/p4.png' %}" width="40" alt="Icon">
+                   </div>
+                   <div class="ar-text" style="text-align:right" dir="rtl">
+                     <h3 style="text-align:right">برای برگزاری مراسم عروسی وام بگیرید</h3>
+                     <p style="font-family: 'IranSans'; font-size: 0.8rem">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                   </div>
+                 </li>
+                 <li>
+                   <div class="ar-icon">
+                     <img src="{% static 'assets/icons/p3.png' %}" width="40" alt="Icon">
+                   </div>
+                   <div class="ar-text" style="text-align:right" dir="rtl">
+                     <h3 style="text-align:right">برای شروع پروژه، سرمایه‌گذار پیدا کنید</h3>
+                     <p style="font-family: 'IranSans'; font-size: 0.8rem">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                   </div>
+                 </li>
+                 <li>
+                   <div class="ar-icon">
+                     <img src="{% static 'assets/icons/p2.png' %}" width="40" alt="Icon">
+                   </div>
+                   <div class="ar-text" style="text-align:right" dir="rtl">
+                     <h3 style="text-align:right">از سرمایه‌ خود سود کنید</h3>
+                     <p style="font-family: 'IranSans'; font-size: 0.8rem">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                   </div>
+                 </li>
+               </ul>
+             </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!--<div class="flex-split">
+       <div class="f-left">
+         <div class="left-content">
+           <h2><span>Pelican</span> Analytics now got the next level</h2>
+           <p>Just get the code and sit tight, you'll witness its power and performance in lead conversion.
+              Powerful and productive technology.</p>
+           <a href="#" class="btn btn-action"><span>Get Pelican</span></a>
+         </div>
+       </div>
+       <div class="f-right">
+         <div class="video-icon hidden-xs text-center">
+           <a class="popup" href="https://www.youtube.com/watch?v=6NC_ODHu5jg"><i class="ion-ios-play"></i></a>
+         </div>
+       </div>
+     </div>-->
+
+
+   <!-- Counter Section -->
+     <div class="yd-stats">
+       <div class="container-s">
+         <div class="row text-center">
+           <div class="col-sm-12">
+             <div class="intro">
+               <h4>نتایج ما</h4>
+               <h2>با یاری خداوند و تکیه بر تیم خود</h2>
+             </div>
+           </div>
+           <div class="col-6 col-sm-3">
+             <div class="counter-up">
+               <div class="counter-icon">
+                 <img src="{% static 'assets/icons/i6.png' %}" alt="Icon">
+               </div>
+                <h3><span class="counter">20</span>%</h3>
+               <div class="counter-text">
+                 <h2>سود سپرده</h2>
+               </div>
+             </div>
+           </div>
+           <div class="col-6 col-sm-3">
+             <div class="counter-up">
+               <div class="counter-icon">
+                 <img src="{% static 'assets/icons/i1.png' %}" alt="Icon">
+               </div>
+                <h3 dir="rtl"><span class="counter">190</span> نفر</h3>
+               <div class="counter-text">
+                 <h2>تعداد کاربران</h2>
+               </div>
+             </div>
+           </div>
+           <div class="col-6 col-sm-3">
+             <div class="counter-up">
+               <div class="counter-icon">
+                 <img src="{% static 'assets/icons/i2.png' %}" alt="Icon">
+               </div>
+                <h3 dir="rtl"><span class="counter">485</span>تا</h3>
+               <div class="counter-text">
+                 <h2>تعداد معاملات</h2>
+               </div>
+             </div>
+           </div>
+           <div class="col-6 col-sm-3">
+             <div class="counter-up">
+               <div class="counter-icon">
+                 <img src="{% static 'assets/icons/i5.png' %}" alt="Icon">
+               </div>
+                <h3 dir="rtl"><span class="counter">69</span>تا</h3>
+               <div class="counter-text">
+                 <h2>تعداد پروژه‌ها</h2>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div><!-- Counter Section Ends -->
+
+
+      <div id="reviews" class="yd-reviews"><!-- Pelican Reviews -->
+        <div class="container-s">
+          <div class="row text-center">
+            <div class="col-sm-12 col-lg-8 offset-lg-2">
+              <div class="intro">
+                <h1>آنیوام از منظر مشتریان</h1>
+                <p>We have  very fair pricing policy that would benefit you and us at the same time.
+                  Get the free plan &amp; if you need more - pay.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 offset-lg-3 text-center">
+              <div class="review-cards owl-carousel owl-theme">
+                <div class="card-single">
+                  <div class="review-text">
+                    <h1>"Team hangouts and instant text messaging right from the main dashboard. Deliver the best stories and ideas.
+                      Get the free plan & if you need more - pay."
+                    </h1>
+                  </div>
+                  <div class="review-attribution">
+                    <div class="review-img">
+                      <img class="img-fluid rounded-circle" src="{% static 'assets/icons/review-1.png' %}" alt="Review">
+                    </div>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-ios-star-half"></i>
+                    <h2> Albert Rossi</h2>
+                    <h6>Stack Developer</h6>
+                    <a href="#">Dropboxes Inc</a>
+                  </div>
+                 </div>
+                 <div class="card-single">
+                  <div class="review-text">
+                    <h1>"We have very fair pricing policy that would benefit you and us at the same time.
+                      Choose what price you're willing to pay."
+                    </h1>
+                  </div>
+                  <div class="review-attribution">
+                    <div class="review-img">
+                      <img class="img-fluid rounded-circle" src="{% static 'assets/icons/review-2.png' %}" alt="Review">
+                    </div>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-ios-star-half"></i>
+                    <h2> Melissa Vanbergh</h2>
+                    <h6>Vice President</h6>
+                    <a href="#">Vestor Corp</a>
+                  </div>
+                </div>
+                <div class="card-single">
+                  <div class="review-text">
+                    <h1>"Team hangouts and instant text messaging right from the main dashboard. Deliver the best stories and ideas.
+                      Get the free plan & if you need more - pay."
+                    </h1>
+                  </div>
+                  <div class="review-attribution">
+                    <div class="review-img">
+                      <img class="img-fluid rounded-circle" src="{% static 'assets/icons/review-3.png' %}" alt="Review">
+                    </div>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <i class="ion ion-star"></i>
+                    <h2> Joshua Peterson</h2>
+                    <h6>Product Developer</h6>
+                    <a href="#">Betabet Inc</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pelican Reviews Ends -->
+
+
+
+      <div id="pricing" class="pricing-section text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+              <div class="pricing-intro">
+                <h1>پلن‌های ما</h1>
+                <p dir="rtl" style="font-family: 'IranSans'; font-weight: lighter">
+                  اگر شما نیاز به پول دارید یا پول‌دارید:
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="table-left">
+                    <h3>وام‌گیرنده</h3>
+                    <p>با سود مشخص وام بگیرید</p>
+                    <div class="pricing-details">
+                     <span>تا سقف ۵۰م</span>
+                    </div>
+                    <button class="btn btn-primary btn-action" type="button">وام بگیر</button>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="table-right">
+                    <h3>وام‌دهنده</h3>
+                    <p>با سود مشخص وام بده</p>
+
+                    <div class="pricing-details">
+                     <span>شروع از ۱م</span>
+                    </div>
+                    <button class="btn btn-primary btn-action btn-white" type="button">وام بده</button>
+                  </div>
+                </div>
+              </div>
+              <p class="refund-txt">*کارمزد آنیوام محفوظ است</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="buy" class="cta-sm">
+        <div class="container-m text-center">
+          <div class="cta-content">
+            <h4>WHAT ARE YOU WAITING FOR?</h4>
+            <h1>Start now and turn your money into a profitable route.</h1>
+            <a class="btn-action" href="#">Get Started now</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Pelican Footer Section -->
+      <div class="footer-sm">
+        <div class="container-m">
+          <div class="row">
+            <div class="col-md-4" align="left">
+              <ul>
+                <li><a href="https://instagram.com"><img src="{% static 'assets/images/insta.png' %}" height="40" width="40"></a></li>
+                <li><a href="https://twitter.com"><img src="{% static 'assets/images/tweet.png' %}" height="40" width="40"></a></li>
+                <li><a href="http://shalqam.ir"><img src="{% static 'assets/images/shlqm.png' %}" height="40" width="40"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <a class="footer-logo" href="#">آنیوام</a>
+            </div>
+            <div class="col-md-4">
+              <ul>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">پیوندها</a></li>
+                <li><a href="#">پشتیبانی</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

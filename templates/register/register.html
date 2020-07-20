@@ -1,0 +1,49 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>پلتفرم مالی آنیوام</title>
+        <link rel="icon" href="{% static 'assets/icons/favicon.png' %}" type="image/png" sizes="16x16">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <meta name="description" content="Pelican Multipurpose Startup Business Template">
+        <meta name="keywords" content="Pelican HTML Template, Pelican Startup Business Template, Startup Template"> -->
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <!--<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}"> <!-- Resource style -->
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}"> <!-- Resource style -->
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'assets/css/style-login.css' %}" rel="stylesheet" type="text/css" media="all" />
+    </head>
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="{% static 'assets/images/plus.png' %}" id="icon" alt="User Icon" style="width: 30%; height: 30%"/>
+        </div>
+
+        <!-- Login Form -->
+        <form action="/" method="POST" class="form-group">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary btn-action">Sign Up</button>    
+        </form>
+        
+    <!-- Remind Passowrd -->
+      <div id="formFooter" style="text-align: left">
+        <a class="underlineHover" href="/login" style="text-decoration: none">قبلا ثبت‌نام کرده‌اید؟</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
