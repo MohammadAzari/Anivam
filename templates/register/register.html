@@ -32,9 +32,14 @@
         </div>
 
         <!-- Login Form -->
-        <form action="/" method="POST" class="form-group">
+        <form action="" method="POST" class="form-group">
             {% csrf_token %}
-            {{ form|crispy }}
+            <!-- {{ form|crispy }} -->
+            <input type="text" id="name" class="fadeIn second" name="name" placeholder=" نام و نام خانوادگی">
+            <input type="text" id="username" class="fadeIn second" name="username" placeholder="نام کاربری">
+            <input type="text" id="nid" class="fadeIn second" name="nid" placeholder="شماره شناسنامه">
+            <input type="text" id="email" class="fadeIn second" name="email" placeholder="آدرس پست الکترونیکی">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="رمز عبور"> 
             <button type="submit" class="btn btn-primary btn-action">Sign Up</button>    
         </form>
         

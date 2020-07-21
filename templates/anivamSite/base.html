@@ -33,9 +33,10 @@
             <ul class="navbar-nav ml-auto navbar-right">
               {% if user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/logout">خروج</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/profile">پروفایل</a></li>  
               {% else %}
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/login">ورود</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/profile">پروفایل</a></li>
+                
               {% endif %}
                 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% static 'assets/pages/services.html' %}">خدمات</a></li>
               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% static 'assets/pages/rules.html' %}">قوانین</a></li> -->
