@@ -4,6 +4,8 @@ def home(request):
     return render(request, 'anivamSite/index.html')
 
 def profile(request):
+    if request.user.is_authenticated:
+        username = request.user.username
     # following = None
     # followers = None
     # credit = None
@@ -12,4 +14,4 @@ def profile(request):
     #     followings_numb = len(request.user.followings.all())
     #     credit = request.user.credit
     # {'following':followers_numb, 'followings':followings_numb, 'credit':credit}
-    return render(request, 'anivamSite/profile.html')
+    return render(request, 'anivamSite/profile.html', {'username':username})

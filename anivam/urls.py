@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('anivamSite.urls')),
     path('register/', include('register.urls')),
     path('', include('django.contrib.auth.urls')),
+    path('chat/', include('chat.urls')),
 ]
 
 
