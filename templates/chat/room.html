@@ -158,7 +158,7 @@
         <div class="mesgs">
           <div id="chat-log" class="msg_history">
             <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+              <!-- <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div> -->
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p>Test which is a new approach to have all
@@ -221,39 +221,60 @@
 
         chatSocket.onmessage = function(e) {
             const data = JSON.parse(e.data);
+            if ("{{username}}" == data.username){
+                var tag = document.createElement("div");
+                tag.setAttribute("class", "outgoing_msg");
 
-            var tag = document.createElement("div");
-            tag.setAttribute("class", "incoming_msg");
+                var tag2 = document.createElement("div");
+                tag2.setAttribute("class", "sent_msg");
 
-            var tag2 = document.createElement("div");
-            tag2.setAttribute("class", "incomig_msg_img");
+                var tag6 = document.createElement("p");
+                tag6.innerHTML = 'ME' + ' :  ' + data.message;
+                // tag6.innerHTML = data.message;
 
-            var tag3 = document.createElement("img");
-            tag3.setAttribute("src", "https://ptetutorials.com/images/user-profile.png");
-            tag3.setAttribute("alt", "sunil");
-            tag2.appendChild(tag3);
+                var tag7 = document.createElement("span");
+                tag7.setAttribute("class", "time_date");
+                tag7.innerHTML = "11:01 AM    |    June 9";
 
-            tag.appendChild(tag2);
+                tag2.appendChild(tag6);
+                tag2.appendChild(tag7);
+                tag.appendChild(tag2);
+            }
+            else {
+                var tag = document.createElement("div");
+                tag.setAttribute("class", "incoming_msg");
 
-            var tag4 = document.createElement("div");
-            tag4.setAttribute("class", "received_msg");
+                var tag2 = document.createElement("div");
+                tag2.setAttribute("class", "incomig_msg_img");
 
-            var tag5 = document.createElement("div");
-            tag5.setAttribute("class", "received_withd_msg");
+                // var tag3 = document.createElement("img");
+                // tag3.setAttribute("src", "https://ptetutorials.com/images/user-profile.png");
+                // tag3.setAttribute("alt", "sunil");
+                // tag2.appendChild(tag3);
 
-            var tag6 = document.createElement("p");
-            tag6.innerHTML = data.message;
+                tag.appendChild(tag2);
 
-            var tag7 = document.createElement("span");
-            tag7.setAttribute("class", "time_date");
-            tag7.innerHTML = "11:01 AM    |    June 9";
+                var tag4 = document.createElement("div");
+                tag4.setAttribute("class", "received_msg");
+
+                var tag5 = document.createElement("div");
+                tag5.setAttribute("class", "received_withd_msg");
+
+                var tag6 = document.createElement("p");
+                tag6.innerHTML = data.username + ' :  ' + data.message;
+                // tag6.innerHTML = data.message;
+
+                var tag7 = document.createElement("span");
+                tag7.setAttribute("class", "time_date");
+                tag7.innerHTML = "11:01 AM    |    June 9";
 
 
-            tag5.appendChild(tag6);
-            tag5.appendChild(tag7);
-            tag4.appendChild(tag5);
-            tag.appendChild(tag4);
-
+                tag5.appendChild(tag6);
+                tag5.appendChild(tag7);
+                tag4.appendChild(tag5);
+                tag.appendChild(tag4);
+            }
+            
             // var text = document.createTextNode(data.message);
             // tag.appendChild
             // tag.appendChild(text);
