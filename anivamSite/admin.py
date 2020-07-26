@@ -7,6 +7,6 @@ class PersonAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'int_code', 'credit')
 
 
-@admin.register(models.Transaction)
-class TransactionAdmin(admin.ModelAdmin):
-    list_display = ('lender', 'borrower')
+# @admin.register(models.Transaction)
+# class TransactionAdmin(admin.ModelAdmin):
+#     list_display = ('lender', 'borrower')
