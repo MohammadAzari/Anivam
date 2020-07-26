@@ -259,11 +259,17 @@
 
                 var tag5 = document.createElement("div");
                 tag5.setAttribute("class", "received_withd_msg");
-
-                var tag6 = document.createElement("p");
-                tag6.innerHTML = data.username + ' :  ' + data.message;
-                // tag6.innerHTML = data.message;
-
+                if (data.username){
+                    var tag6 = document.createElement("p");
+                    tag6.innerHTML = data.username + ' :  ' + data.message;
+                    // tag6.innerHTML = data.message;
+                }
+                else{
+                    var tag6 = document.createElement("p");
+                    tag6.innerHTML = 'Unknown User :  ' + data.message;
+                    // tag6.innerHTML = data.message;
+                }
+                
                 var tag7 = document.createElement("span");
                 tag7.setAttribute("class", "time_date");
                 tag7.innerHTML = "11:01 AM    |    June 9";
