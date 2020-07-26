@@ -8,7 +8,8 @@ from django.contrib.auth.models import User
 class ChatConsumer(WebsocketConsumer):
 
     def fetch_messages(self, data):
-        msgs = Messages.objects.order_by('-time').all()[:3]
+        msgs = Messages.objects.order_by('-time').filter(room=data['room'])[:30]
+        
         content = {
             'messages':self.messages_to_json(msgs),
             'command':'fetch_messages',
@@ -19,7 +20,8 @@ class ChatConsumer(WebsocketConsumer):
         author = User.objects.get(username=data['from'])
         message = Messages.objects.create(
             author=author,
-            content=data['message']
+            content=data['message'],
+            room=data['room'],
         )
         content = {
             'command':'new_messages',
@@ -38,6 +40,7 @@ class ChatConsumer(WebsocketConsumer):
                 'author':msg.author.username,
                 'content':msg.content,
                 'time':str(msg.time),
+                'room':msg.room,
         }
         
     commands = {

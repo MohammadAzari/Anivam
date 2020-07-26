@@ -7,13 +7,15 @@ from datetime import date
 
 class Person(models.Model):
     """model representing a person."""
-    int_code = models.PositiveIntegerField(primary_key=True, blank=False, null=False)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    int_code = models.PositiveIntegerField(blank=False, null=False)
     first_name = models.CharField(max_length=100, null=False, blank=False)
     last_name = models.CharField(max_length=100, null=False, blank=False)
     date_of_birth = models.DateField(null=False, blank=False)
     credit = models.PositiveIntegerField(default=0)
-    followers = models.ManyToManyField('self', related_name = 'follows', symmetrical=False)
-    followings = models.ManyToManyField('self', related_name = 'followis', symmetrical=False)
+    followers = models.ManyToManyField('self', related_name = 'follows', symmetrical=False, blank=True)
+    followings = models.ManyToManyField('self', related_name = 'followis', symmetrical=False, blank=True)
+
 
     def __unicode__(self):
         return u'%s follows %s' % (self.followers, self.followings)

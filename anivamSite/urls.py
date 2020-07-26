@@ -7,7 +7,8 @@ app_name='anivamSite'
 
 urlpatterns = [
     path('', views.home, name='index'),
-    path('profile/', views.profile, name='profile'),
+    path('profile/', views.profile_base, name='profile'),
+    path('profile/<str:username>/', views.profile, name='profile'),
 ]
 
 
