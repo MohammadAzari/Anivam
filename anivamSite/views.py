@@ -43,10 +43,12 @@ def profile(request, username):
             elif key == "want_follow":
                 p.followers.add(person)
                 person.followings.add(p)
+                
         content = {
             'username':username,
             'its_me':its_me,
             "person":person,
             'is_follow':is_follow,
+            'following':len(person.followings.all())
         }
         return render(request, 'anivamSite/profile.html', content)

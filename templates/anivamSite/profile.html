@@ -21,20 +21,20 @@
         </div>
       </br> </br>
         <div id=wrapper>
-          <div id="first">تعداد دوستان</div> ۱۲ نفر </br></br>
+          <div id="first">تعداد دوستان</div> {{following}} نفر </br></br>
           <div id="second">تعداد معاملات</div> ۴۷ عدد </br></br>
           <div id="third">حجم معاملات</div> ۱۲۰ میلیون </br></br>
         </div>
         {% if its_me %}
           <a class="btn btn-primary btn-action" style="color:white" href="//localhost:8000/chat/{{username}}/"> پیام دادن  </a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           {% if is_follow %}
-            <form action="//localhost:8000/profile/{{username}}/" method="POST">
+            <form action="" method="POST">
               {% csrf_token %}
               <input type="hidden" name="key" value="want_unfollow">
               <button type="submit" class="btn btn-danger btn-action" style="color:white; background-color: red;">دوست - </button>
             </form>
           {% else %}
-            <form action="//localhost:8000/profile/{{username}}/" method="POST">
+            <form action="" method="POST">
               {% csrf_token %}
               <input type="hidden" name="key" value="want_follow">
               <button type="submit" class="btn btn-primary btn-action" style="color:white">دوست + </button>
