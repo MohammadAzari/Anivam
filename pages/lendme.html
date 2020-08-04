@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ثبت‌نام</title>
+  <link rel="icon" href="../icons/favicon.png" type="image/png" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="description" content="Pelican Multipurpose Startup Business Template">
+  <meta name="keywords" content="Pelican HTML Template, Pelican Startup Business Template, Startup Template"> -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <!--<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="../css/animate.css"> <!-- Resource style -->
+  <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/owl.theme.css">
+  <link rel="stylesheet" href="../css/ionicons.min.css"> <!-- Resource style -->
+  <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../css/style-login.css" rel="stylesheet" type="text/css" media="all" />
+  <script>
+    function func1() {
+      document.getElementById("amount").value =  document.getElementById("money").value;
+    }
+    function func2() {
+      document.getElementById("money").value = document.getElementById("amount").value;
+    }
+    function monat() {
+      document.getElementById("month").value = document.getElementById("amount").value * 1000000 * (1 + (document.getElementById("intrest").value / 100 * document.getElementById("getback").value / 12)) / document.getElementById("getback").value;;
+    }
+  </script>
+</head>
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="../images/lend.png" id="icon" alt="User Icon" style="width: 30%; height: 30%"/>
+        </div>
+
+        <!-- Login Form -->
+        <form action="./create.php" method="get" accept-charset="UTF-8">
+          <input type="range" id="money" class="fadeIn second" name="money" min="0.5" max="100" step="0.5" value="10" oninput="func1()" style="width: 40%">
+          مبلغ <input type="text" id="amount" class="fadeIn second" name="amount" style="width: 15%; padding: 15px 10px;" onchange="func2()" value="10"> میلیون تومان
+          </br><input type="text" id="name" class="fadeIn second" name="name" style="width: 60%" value="سپهر زمانی" disabled> در وجه خانم/آقای 
+          </br><select id="whatfor" name="whatfor" class="dropdown">
+            <option value="trip">سفر</option>
+            <option value="fick">ازدواج</option>
+            <option value="carp">تعمیر یا خرید خودرو</option>
+            <option value="home">تعمیر یا بازسازی خانه</option>
+            <option value="care">درمان</option>
+            <option value="move">جابه‌جایی</option>
+            <option value="good">خرید کالا</option>
+            <option value="nvst">سرمایه‌گذاری</option>
+          </select> بابت کمک‌هزینه </br>
+          بازپرداخت طی <input type="number" id="getback" name="getback" min="1" max="36" value="12" onchange="monat()"> ماه 
+          با سود <input type="number" id="intrest" name="intrest" min="6" max="50" value="20" onchange="monat()">٪ سالیانه
+          </br> مبلغ هر قسط ماهانه برابر با <input type="text" id="month" class="fadeIn second" name="month" style="width: 30%" value="1000000" onclick="monthly()" disabled> تومان
+        </form>
+
+    <!-- Remind Passowrd -->
+      <div id="formFooter" style="text-align: left">
+        <a class="underlineHover" href="./login.html" style="text-decoration: none">قبلا ثبت‌نام کرده‌اید؟</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
