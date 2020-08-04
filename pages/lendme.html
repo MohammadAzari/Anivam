@@ -53,9 +53,10 @@
             <option value="good">خرید کالا</option>
             <option value="nvst">سرمایه‌گذاری</option>
           </select> بابت کمک‌هزینه </br>
-          بازپرداخت طی <input type="number" id="getback" name="getback" min="1" max="36" value="12" onchange="monat()"> ماه 
-          با سود <input type="number" id="intrest" name="intrest" min="6" max="50" value="20" onchange="monat()">٪ سالیانه
-          </br> مبلغ هر قسط ماهانه برابر با <input type="text" id="month" class="fadeIn second" name="month" style="width: 30%" value="1000000" onclick="monthly()" disabled> تومان
+          بازپرداخت طی <input type="number" id="getback" name="getback" class="nummer" min="1" max="36" value="12" oninput="monat()"> ماه 
+          با سود <input type="number" id="intrest" name="intrest" class="nummer" min="6" max="50" value="20" oninput="monat()">٪ سالیانه
+          </br> مبلغ هر قسط ماهانه برابر با <input type="text" id="month" class="fadeIn second" name="month" style="width: 35%" value="1000000" onclick="monthly()" disabled> تومان
+          <input type="submit" class="btn btn-primary btn-action" value="وام بگیر" style="font-family: IranSans">
         </form>
 
     <!-- Remind Passowrd -->
